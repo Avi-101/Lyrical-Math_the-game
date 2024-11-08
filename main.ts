@@ -1,12 +1,529 @@
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile19`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 30 divided by 5?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 6) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level36`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile38`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If you have $2,092 and spend $6 at the store, how much money will you have left?", DialogLayout.Full)
+    input2 = game.askForNumber("", 4)
+    answer = input2
+    if (answer == 2086) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level91`)
+        game.splash("Level 6!")
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
 // CHECKPOINTS AND END
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     if (MrsFinney.isHittingTile(CollisionDirection.Bottom)) {
         MrsFinney.vy = -200
     }
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile65`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("Is 85 a rational or irrational number?", DialogLayout.Full)
+    input22 = game.askForString("", 8)
+    answer2 = input22
+    if (answer2.includes("rational")) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level159`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile45`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("How many yards is 18FT?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 6) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level109`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile63`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("Is 0.465 a rational or irrational number?", DialogLayout.Full)
+    input22 = game.askForString("", 8)
+    answer2 = input22
+    if (answer2.includes("rational")) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level156`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile`, function (sprite, location) {
     game.setGameOverScoringType(game.ScoringType.HighScore)
-    game.gameOver(false)
+    game.setGameOverEffect(true, effects.confetti)
+    music.play(music.melodyPlayable(music.beamUp), music.PlaybackMode.UntilDone)
+    game.gameOver(true)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile60`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("Given the data set:  9, 3, 7, 10 , 2, 5, 13, 1, 2 what is the mode?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 2) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level147`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile67`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What type of rational number is 14?", DialogLayout.Full)
+    input22 = game.askForString("", 7)
+    answer2 = input22
+    if (answer2.includes("integer")) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level168`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile15`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 30 divided by 2?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 15) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level23`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile22`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 8 x 3/4?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 6) {
+        scaling.scaleToPercent(MrsFinney, 200, ScaleDirection.Uniformly, ScaleAnchor.Middle)
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level47`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile24`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("How many minutes is 1/5 of an hour?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 12) {
+        scaling.scaleToPercent(MrsFinney, 200, ScaleDirection.Uniformly, ScaleAnchor.Middle)
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level53`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile32`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 5 ÷ 1/4?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 20) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level73`)
+        game.splash("Level 5!")
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile13`, function (sprite, location) {
+    MrsFinney.setBounceOnWall(false)
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 3x7?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 21) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level14`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile33`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If you have -$18 in the bank and then deposit $60, how much money will you have in the bank?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 42) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level76`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile25`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 2/4 x 6?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 3) {
+        scaling.scaleToPercent(MrsFinney, 200, ScaleDirection.Uniformly, ScaleAnchor.Middle)
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level56`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        game.splash("Level 4!")
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile42`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If you have a triangle with an area of 10 square meters, and a height of 4 meters, what is the base's measurement?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 5) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level100`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile39`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If you have a rectangular table that has a width of 11FT and height of 7FT, what is the area of the table?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 77) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level94`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile18`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 48 divided by 6?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 8) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level32`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile29`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 100/60 ÷ 2/30?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 25) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.setCurrentTilemap(tilemap`level62`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile37`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If your elevation is -16FT and you go up 20FT,what is your elevation?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 4) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level89`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile21`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If I had 100 cookies and ate 1/4, how many cookies did I eat?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 25) {
+        scaling.scaleToPercent(MrsFinney, 200, ScaleDirection.Uniformly, ScaleAnchor.Middle)
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level44`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        MrsFinney.sayText("WOAH, I'm a giant!", 2000, true)
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile54`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("How many quarts is 4 gallons?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 16) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level132`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile49`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If you receive an item that is 40 millimeters long, how many centimeters long is the item?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 4) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level118`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile20`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 40 divided by 4?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 10) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level38`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        game.splash("Level 3!")
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile17`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 28 divided by 4?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 7) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level27`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile36`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If you score 48 points in a game, then lose 67, what would your score be?", DialogLayout.Full)
+    input2 = game.askForNumber("", 3)
+    answer = input2
+    if (answer == -19) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level85`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile66`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("Is 6/3 a rational or irrational number?", DialogLayout.Full)
+    input22 = game.askForString("", 8)
+    answer2 = input22
+    if (answer2.includes("rational")) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level162`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile50`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If you have a 108 inch long fish tank, what is the length of the tank in yards?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 3) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level121`)
+        game.splash("Level 8!")
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile59`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("Given the data set:  9, 3, 7, 10 , 2, 5, 13, 1, 2  what is the median?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 5) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level145`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile44`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If you have a rectangle that is 8cm long and 6cm wide, what is the area of the rectangle", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 42) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level106`)
+        game.splash("Level 7!")
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
 })
 // END
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardWater, function (sprite, location) {
@@ -14,9 +531,389 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardWater, function (sp
     game.setGameOverScoringType(game.ScoringType.HighScore)
     game.gameOver(false)
 })
-/**
- * START
- */
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile43`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If you have a rectangular deck that is 18FT long and 9FT wide, what is the area of the deck?", DialogLayout.Full)
+    input2 = game.askForNumber("", 3)
+    answer = input2
+    if (answer == 162) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level103`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile47`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("How many inches is 5 yards?", DialogLayout.Full)
+    input2 = game.askForNumber("", 3)
+    answer = input2
+    if (answer == 180) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level112`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile57`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("Given the data set:  9, 3, 7, 10 , 2, 5, 13, 1, 2  what is the mean?", DialogLayout.Full)
+    input2 = game.askForNumber("", 4)
+    answer = input2
+    if (answer == 5.78) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        MrsFinney.ay = 500
+        info.changeScoreBy(1)
+        MrsFinney.sayText("Looks like we have gravity again!", 2000, true)
+        tiles.setCurrentTilemap(tilemap`level141`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`L1-D1`, function (sprite, location) {
+    game.showLongText("Oh no, it's locked!", DialogLayout.Bottom)
+    pause(1000)
+    game.showLongText("Hmm... it looks like the only way to unlock this door is by solving an equation", DialogLayout.Center)
+    game.showLongText("What is 3x8?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 24) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level7`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile61`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("Find the mean given the data set: 7, 1, 2, 8, 2, 5, 2, 7, 2, 3, 10, 13, 4", DialogLayout.Full)
+    input2 = game.askForNumber("", 4)
+    answer = input2
+    if (answer == 5.08) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level150`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile62`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("Find the median given the data set: 7, 1, 2, 8, 2, 5, 2, 7, 2, 3, 10, 13, 4", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 4) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level153`)
+        game.splash("Level 10!")
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`L1-D2`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(1000)
+    game.showLongText("What is 7x4?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 28) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level10`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile68`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("Is the square root of 82 rational or irrational?", DialogLayout.Full)
+    input22 = game.askForString("", 10)
+    answer2 = input22
+    if (answer2.includes("irrational")) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level170`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile31`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 2/3 ÷ 1/6?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 4) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.setCurrentTilemap(tilemap`level70`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile27`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 36/5 ÷ 6/5?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 6) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        scaling.scaleToPercent(MrsFinney, 100, ScaleDirection.Uniformly, ScaleAnchor.Middle)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.setCurrentTilemap(tilemap`level59`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        MrsFinney.sayText("Oh no, there's no gravity!", 2000, true)
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`L1-D3`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 4x4?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 16) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.sayText("Woah, I'm bouncing off of everything!", 5000, true)
+        MrsFinney.setBounceOnWall(true)
+        tiles.setCurrentTilemap(tilemap`level17`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile41`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If you have a square table with an area of 16FT, what is the length of the table's side?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 4) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level97`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile53`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("How many pints is 5 quarts?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 10) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level129`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile51`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("How many ounces is 7 cups?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 56) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level126`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile56`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If you and your friends drank 28 quarts of fruit punch, how many gallons of fruit punch did y'all drink?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 7) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level138`)
+        game.splash("Level 9!")
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile48`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("How many millimeters is 3 centimeters?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 30) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level115`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile55`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If a recipe to bake a cake requires 3 cups of milk, how much milk does it require in fluid ounces?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 24) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level135`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile35`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If it is -17°F outside and the temperature raises by 47°F, what is the new temperature?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 30) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        tiles.setCurrentTilemap(tilemap`level80`)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile23`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("If I had 18 cupcakes and ate 1/6, how many cupcakes did I eat?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 3) {
+        scaling.scaleToPercent(MrsFinney, 200, ScaleDirection.Uniformly, ScaleAnchor.Middle)
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level50`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile14`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 9x3?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 27) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        tiles.setCurrentTilemap(tilemap`level20`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+        game.splash("Level 2!")
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile30`, function (sprite, location) {
+    game.showLongText("It's locked!", DialogLayout.Bottom)
+    pause(2000)
+    game.showLongText("What is 3/4 ÷ 6/8?", DialogLayout.Full)
+    input2 = game.askForNumber("", 2)
+    answer = input2
+    if (answer == 1) {
+        game.showLongText("Correct!", DialogLayout.Bottom)
+        MrsFinney.ay = 0
+        MrsFinney.vy = 0
+        controller.moveSprite(MrsFinney)
+        tiles.setCurrentTilemap(tilemap`level66`)
+        tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
+        info.changeScoreBy(1)
+    } else {
+        game.showLongText("Not quite, try again!", DialogLayout.Bottom)
+        pause(1000)
+    }
+})
 let answer2 = ""
 let input22 = ""
 let answer = 0
@@ -504,107 +1401,91 @@ MrsFinney.ay = 500
 MrsFinney.sayText("AHHH!", 1000, false)
 info.setScore(0)
 music.play(music.createSong(hex`00be000408020304001c00100500640000041e000004000000000000000000000000000a040004300000000400012204000800012008000c0001220c001000011d1400180001221c002000012424002800011d2c003000012207001c00020a006400f401640000040000000000000000000000000000000003300000000400012204000800012008000c0001220c001000011d1400180001221c002000012424002800011d2c003000012208001c000e050046006603320000040a002d0000006400140001320002010002300000000400012204000800012008000c0001220c001000011d1400180001221c002000012424002800011d2c0030000122`), music.PlaybackMode.LoopingInBackground)
-// LEVEL 1
 forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile10`)) {
-        game.showLongText("Oh no, it's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("Hmm... it looks like the only way to unlock this door is by solving an equation", DialogLayout.Center)
-        game.showLongText("What is 3x8?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 24) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level7`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile11`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 7x4?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 28) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level10`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile12`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 4x4?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 16) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.sayText("Woah, I'm bouncing off of everything!", 5000, true)
-            MrsFinney.setBounceOnWall(true)
-            tiles.setCurrentTilemap(tilemap`level17`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-// MOVEMENT and ANIMATIONS
-forever(function () {
-    scroller.scrollBackgroundWithSpeed(-50, 20, scroller.BackgroundLayer.Layer0)
-    scroller.scrollBackgroundWithSpeed(-10, 10, scroller.BackgroundLayer.Layer1)
-    scroller.scrollBackgroundWithSpeed(-50, 0, scroller.BackgroundLayer.Layer2)
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile13`)) {
-        MrsFinney.setBounceOnWall(false)
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 3x7?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 21) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level14`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile14`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 9x3?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 27) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level20`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            game.splash("Level 2!")
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
+    characterAnimations.loopFrames(
+    MrsFinney,
+    [img`
+        ........ffffffff.........
+        ......fffffffffff........
+        .....fffffffffffff.......
+        .....fffffffffffff.......
+        .....fffffffffffff.......
+        ......ffffffffffff.......
+        .......ffffffffff........
+        ........fffffff..........
+        .......ffffffff..........
+        ......fffffdffff.........
+        ......ffffddddfff........
+        ......ff11dd11dff........
+        .....fdd1fddf1ddf........
+        .....fddddddddddf........
+        ......fddd33dddff........
+        .......fddddddf..........
+        ........ffddfff..........
+        ......ff11dd111f.........
+        ......f111dd1111f........
+        .....f11111111111f.......
+        .....f11111111111f.......
+        .....fdd1111111ddf.......
+        ...fffdd1111111ddfff.....
+        ...fdddd1111111ddddf.....
+        ...fdddd1111111ddddf.....
+        ...fffff8888888fffff.....
+        .......f8888888f.........
+        .......f8888888f.........
+        .......f88fff88f.........
+        .......f88f.f88f.........
+        .......f88f.f88f.........
+        .......f88f.f88f.........
+        .......ffff.ffff.........
+        .....fff22f.f22fff.......
+        .....f22fff.fff22f.......
+        .....f2ff2f.f2ff2f.......
+        .....f1111f.f1111f.......
+        .....ffffff.ffffff.......
+        `,img`
+        ........ffffffff.........
+        .......fffffffffff.......
+        ......fffffffffffff......
+        ......fffffffffffff......
+        ......fffffffffffff......
+        ......ffffffffffff.......
+        .......ffffffffff........
+        .........fffffff.........
+        .........ffffffff........
+        ........ffffdfffff.......
+        .......fffddddffff.......
+        .......ffd11dd11ff.......
+        .......fdd1fddf1ddf......
+        .......fddddddddddf......
+        .......ffddd33dddf.......
+        .........fddddddf........
+        .........fffddff.........
+        ........f111dd11ff.......
+        .......f1111dd111f.......
+        ......f11111111111f......
+        ......f11111111111f......
+        ......fdd1111111ddf......
+        ....fffdd1111111ddfff....
+        ....fdddd1111111ddddf....
+        ....fdddd1111111ddddf....
+        ....fffff8888888fffff....
+        ........f8888888f........
+        ........f8888888f........
+        ........f88fff88f........
+        ........f88f.f88f........
+        ........f88f.f88ffffff...
+        ........f88f.f88f2f21f...
+        ........ffff.ffff2ff1f...
+        ......fff22f....ff2f1f...
+        ......f22fff.....f221f...
+        ......f2ff2f.....fffff...
+        ......f1111f.............
+        ......ffffff.............
+        `],
+    500,
+    characterAnimations.rule(Predicate.MovingLeft)
+    )
 })
 forever(function () {
     characterAnimations.loopFrames(
@@ -739,1008 +1620,9 @@ forever(function () {
     characterAnimations.rule(Predicate.NotMoving)
     )
 })
+// MOVEMENT and ANIMATIONS
 forever(function () {
-    characterAnimations.loopFrames(
-    MrsFinney,
-    [img`
-        ........ffffffff.........
-        ......fffffffffff........
-        .....fffffffffffff.......
-        .....fffffffffffff.......
-        .....fffffffffffff.......
-        ......ffffffffffff.......
-        .......ffffffffff........
-        ........fffffff..........
-        .......ffffffff..........
-        ......fffffdffff.........
-        ......ffffddddfff........
-        ......ff11dd11dff........
-        .....fdd1fddf1ddf........
-        .....fddddddddddf........
-        ......fddd33dddff........
-        .......fddddddf..........
-        ........ffddfff..........
-        ......ff11dd111f.........
-        ......f111dd1111f........
-        .....f11111111111f.......
-        .....f11111111111f.......
-        .....fdd1111111ddf.......
-        ...fffdd1111111ddfff.....
-        ...fdddd1111111ddddf.....
-        ...fdddd1111111ddddf.....
-        ...fffff8888888fffff.....
-        .......f8888888f.........
-        .......f8888888f.........
-        .......f88fff88f.........
-        .......f88f.f88f.........
-        .......f88f.f88f.........
-        .......f88f.f88f.........
-        .......ffff.ffff.........
-        .....fff22f.f22fff.......
-        .....f22fff.fff22f.......
-        .....f2ff2f.f2ff2f.......
-        .....f1111f.f1111f.......
-        .....ffffff.ffffff.......
-        `,img`
-        ........ffffffff.........
-        .......fffffffffff.......
-        ......fffffffffffff......
-        ......fffffffffffff......
-        ......fffffffffffff......
-        ......ffffffffffff.......
-        .......ffffffffff........
-        .........fffffff.........
-        .........ffffffff........
-        ........ffffdfffff.......
-        .......fffddddffff.......
-        .......ffd11dd11ff.......
-        .......fdd1fddf1ddf......
-        .......fddddddddddf......
-        .......ffddd33dddf.......
-        .........fddddddf........
-        .........fffddff.........
-        ........f111dd11ff.......
-        .......f1111dd111f.......
-        ......f11111111111f......
-        ......f11111111111f......
-        ......fdd1111111ddf......
-        ....fffdd1111111ddfff....
-        ....fdddd1111111ddddf....
-        ....fdddd1111111ddddf....
-        ....fffff8888888fffff....
-        ........f8888888f........
-        ........f8888888f........
-        ........f88fff88f........
-        ........f88f.f88f........
-        ........f88f.f88ffffff...
-        ........f88f.f88f2f21f...
-        ........ffff.ffff2ff1f...
-        ......fff22f....ff2f1f...
-        ......f22fff.....f221f...
-        ......f2ff2f.....fffff...
-        ......f1111f.............
-        ......ffffff.............
-        `],
-    500,
-    characterAnimations.rule(Predicate.MovingLeft)
-    )
-})
-// LEVEL TWO
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile15`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 30 divided by 2?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 15) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level23`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile17`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 28 divided by 4?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 7) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level27`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile18`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 48 divided by 6?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 8) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level32`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile19`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 30 divided by 5?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 6) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level36`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile20`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 40 divided by 4?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 10) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level38`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            game.splash("Level 3!")
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile22`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 8 x 3/4?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 6) {
-            scaling.scaleToPercent(MrsFinney, 200, ScaleDirection.Uniformly, ScaleAnchor.Middle)
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level47`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-// LEVEL THREE
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile21`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If I had 100 cookies and ate 1/4, how many cookies did I eat?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 25) {
-            scaling.scaleToPercent(MrsFinney, 200, ScaleDirection.Uniformly, ScaleAnchor.Middle)
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level44`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            MrsFinney.sayText("WOAH, I'm a giant!", 2000, true)
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile23`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If I had 18 cupcakes and ate 1/6, how many cupcakes did I eat?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 3) {
-            scaling.scaleToPercent(MrsFinney, 200, ScaleDirection.Uniformly, ScaleAnchor.Middle)
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level50`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile24`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("How many minutes is 1/5 of an hour?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 12) {
-            scaling.scaleToPercent(MrsFinney, 200, ScaleDirection.Uniformly, ScaleAnchor.Middle)
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level53`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile25`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 2/4 x 6?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 3) {
-            scaling.scaleToPercent(MrsFinney, 200, ScaleDirection.Uniformly, ScaleAnchor.Middle)
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.setCurrentTilemap(tilemap`level56`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            game.splash("Level 4!")
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-// Level 4
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile27`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 36/5 ÷ 6/5?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 6) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            scaling.scaleToPercent(MrsFinney, 100, ScaleDirection.Uniformly, ScaleAnchor.Middle)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.setCurrentTilemap(tilemap`level59`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            MrsFinney.sayText("Oh no, there's no gravity!", 2000, true)
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile29`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 100/60 ÷ 2/30?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 25) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.setCurrentTilemap(tilemap`level62`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile30`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 3/4 ÷ 6/8?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 1) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.setCurrentTilemap(tilemap`level66`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile31`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 2/3 ÷ 1/6?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 4) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.setCurrentTilemap(tilemap`level70`)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile32`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What is 5 ÷ 1/4?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 20) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level73`)
-            game.splash("Level 5!")
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-// Level 5
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile33`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If you have -$18 in the bank and then deposit $60, how much money will you have in the bank?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 42) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level76`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile35`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If it is -17°F outside and the temperature raises by 47°F, what is the new temperature?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 30) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level80`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile36`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If you score 48 points in a game, then lose 67, what would your score be?", DialogLayout.Full)
-        input2 = game.askForNumber("", 3)
-        answer = input2
-        if (answer == -19) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level85`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile38`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If you have $2,092 and spend $6 at the store, how much money will you have left?", DialogLayout.Full)
-        input2 = game.askForNumber("", 4)
-        answer = input2
-        if (answer == 2086) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level91`)
-            game.splash("Level 6!")
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile37`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If your elevation is -16FT and you go up 20FT,what is your elevation?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 4) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level89`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-// Level 6
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile39`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If you have a rectangular table that has a width of 11FT and height of 7FT, what is the area of the table?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 77) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level94`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile41`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If you have a square table with an area of 16FT, what is the length of the table's side?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 4) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level97`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile42`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If you have a triangle with an area of 10 square meters, and a height of 4 meters, what is the base's measurement?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 5) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level100`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile43`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If you have a rectangular deck that is 18FT long and 9FT wide, what is the area of the deck?", DialogLayout.Full)
-        input2 = game.askForNumber("", 3)
-        answer = input2
-        if (answer == 162) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level103`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile44`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If you have a rectangle that is 8cm long and 6cm wide, what is the area of the rectangle", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 42) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level106`)
-            game.splash("Level 7!")
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-// Level 7
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile45`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("How many yards is 18FT?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 6) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level109`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile47`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("How many inches is 5 yards?", DialogLayout.Full)
-        input2 = game.askForNumber("", 3)
-        answer = input2
-        if (answer == 180) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level112`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile48`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("How many millimeters is 3 centimeters?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 30) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level115`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile49`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If you receive an item that is 40 millimeters long, how many centimeters long is the item?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 4) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level118`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile50`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If you have a 108 inch long fish tank, what is the length of the tank in yards?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 3) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level121`)
-            game.splash("Level 8!")
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-// Level 8
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile51`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("How many ounces is 7 cups?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 56) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level126`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile54`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("How many quarts is 4 gallons?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 16) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level132`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile53`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("How many pints is 5 quarts?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 10) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level129`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile55`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If a recipe to bake a cake requires 3 cups of milk, how much milk does it require in fluid ounces?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 24) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level135`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile56`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("If you and your friends drank 28 quarts of fruit punch, how many gallons of fruit punch did y'all drink?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 7) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            MrsFinney.ay = 0
-            MrsFinney.vy = 0
-            controller.moveSprite(MrsFinney)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level138`)
-            game.splash("Level 9!")
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-// Level 9!
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile57`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("Given the data set:  9, 3, 7, 10 , 2, 5, 13, 1, 2  what is the mean?", DialogLayout.Full)
-        input2 = game.askForNumber("", 4)
-        answer = input2
-        if (answer == 5.78) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            MrsFinney.ay = 500
-            info.changeScoreBy(1)
-            MrsFinney.sayText("Looks like we have gravity again!", 2000, true)
-            tiles.setCurrentTilemap(tilemap`level141`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile60`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("Given the data set:  9, 3, 7, 10 , 2, 5, 13, 1, 2 what is the mode?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 2) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level147`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile59`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("Given the data set:  9, 3, 7, 10 , 2, 5, 13, 1, 2  what is the median?", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 5) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level145`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile61`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("Find the mean given the data set: 7, 1, 2, 8, 2, 5, 2, 7, 2, 3, 10, 13, 4", DialogLayout.Full)
-        input2 = game.askForNumber("", 4)
-        answer = input2
-        if (answer == 5.08) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level150`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile62`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("Find the median given the data set: 7, 1, 2, 8, 2, 5, 2, 7, 2, 3, 10, 13, 4", DialogLayout.Full)
-        input2 = game.askForNumber("", 2)
-        answer = input2
-        if (answer == 4) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level153`)
-            game.splash("Level 10!")
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-// Level 10!
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile63`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("Is 0.465 a rational or irrational number?", DialogLayout.Full)
-        input22 = game.askForString("", 8)
-        answer2 = input22
-        if (answer2.includes("rational")) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level156`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile65`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("Is 85 a rational or irrational number?", DialogLayout.Full)
-        input22 = game.askForString("", 8)
-        answer2 = input22
-        if (answer2.includes("rational")) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level159`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile66`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("Is 6/3 a rational or irrational number?", DialogLayout.Full)
-        input22 = game.askForString("", 8)
-        answer2 = input22
-        if (answer2.includes("rational")) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level162`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile67`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("What type of rational number is 14?", DialogLayout.Full)
-        input22 = game.askForString("", 7)
-        answer2 = input22
-        if (answer2.includes("integer")) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level168`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Center, assets.tile`myTile68`)) {
-        game.showLongText("It's locked!", DialogLayout.Bottom)
-        pause(2000)
-        game.showLongText("Is the square root of 82 rational or irrational?", DialogLayout.Full)
-        input22 = game.askForString("", 10)
-        answer2 = input22
-        if (answer2.includes("irrational")) {
-            game.showLongText("Correct!", DialogLayout.Bottom)
-            tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
-            info.changeScoreBy(1)
-            tiles.setCurrentTilemap(tilemap`level170`)
-        } else {
-            game.showLongText("Not quite, try again!", DialogLayout.Bottom)
-            pause(1000)
-        }
-    }
-})
-forever(function () {
-    if (MrsFinney.tileKindAt(TileDirection.Bottom, assets.tile`myTile`)) {
-        game.setGameOverEffect(true, effects.confetti)
-        music.play(music.melodyPlayable(music.beamUp), music.PlaybackMode.UntilDone)
-        game.gameOver(true)
-    }
+    scroller.scrollBackgroundWithSpeed(-50, 20, scroller.BackgroundLayer.Layer0)
+    scroller.scrollBackgroundWithSpeed(-10, 10, scroller.BackgroundLayer.Layer1)
+    scroller.scrollBackgroundWithSpeed(-50, 0, scroller.BackgroundLayer.Layer2)
 })
