@@ -937,10 +937,11 @@ game.setDialogFrame(img`
     1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
     `)
 game.setDialogTextColor(1)
-game.showLongText("Help Mrs. Finney use math to get through the world by solving math problems to complete each level.", DialogLayout.Full)
+game.showLongText("Help Mrs. Finney get through every maze by solving math problems to complete each level.", DialogLayout.Full)
+game.showLongText("Don't forget to bring a pencil and paper along with you!", DialogLayout.Full)
 game.splash("To get through each level:")
 game.showLongText("Use the arrow keys to move up, down, left, and right.", DialogLayout.Full)
-game.showLongText("Click \"A\" to select numbers to answer math problems", DialogLayout.Full)
+game.showLongText("Click \"A\" or the space bar to select numbers to answer math problems", DialogLayout.Full)
 game.showLongText("Click \"B\" to backspace and delete numbers", DialogLayout.Full)
 game.showLongText("To win the game, you must conquer all 10 levels and defeat Mr.Time!", DialogLayout.Full)
 game.showLongText("P.S. \"Game Over\" if you land in the water. ", DialogLayout.Full)
@@ -1400,7 +1401,6 @@ tiles.placeOnTile(MrsFinney, tiles.getTileLocation(1, 1))
 MrsFinney.ay = 500
 MrsFinney.sayText("AHHH!", 1000, false)
 info.setScore(0)
-music.play(music.createSong(hex`00be000408020304001c00100500640000041e000004000000000000000000000000000a040004300000000400012204000800012008000c0001220c001000011d1400180001221c002000012424002800011d2c003000012207001c00020a006400f401640000040000000000000000000000000000000003300000000400012204000800012008000c0001220c001000011d1400180001221c002000012424002800011d2c003000012208001c000e050046006603320000040a002d0000006400140001320002010002300000000400012204000800012008000c0001220c001000011d1400180001221c002000012424002800011d2c0030000122`), music.PlaybackMode.LoopingInBackground)
 forever(function () {
     characterAnimations.loopFrames(
     MrsFinney,
